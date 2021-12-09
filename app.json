@@ -1,0 +1,50 @@
+{
+  "name": "Video Sesini Dönüştür",
+  "description": "Telegram'ın ses formatına destek vermediği hiç sesi çıkmayan videoları uygun formata kodlar ve bunu herhangi bir kalite kaybı olmadan yapar.",
+  "keywords": [
+    "telegram",
+    "video",
+    "ses",
+    "bot"
+  ],
+  "logo": "https://telegra.ph/file/c7dcf0c1edeafa52c0205.jpg",
+  "success_url": "https://telegram.dog/SesVideoBot",
+  "repository": "https://github.com/Turkce-Botlar-Sohbet/VideoSesDonustur",
+  "env": {
+    "API_ID": {
+      "description": "https://my.telegram.org'da bir uygulama oluşturarak edinin.",
+      "value": "1111111"
+    },
+    "API_HASH": {
+      "description": "https://my.telegram.org'da bir uygulama oluşturarak edinin.",
+      "value": ""
+    },
+    "BOT_TOKEN": {
+      "description": "https://t.me/BotFather adresinden bir bot oluşturarak edinin.",
+      "value": "1111111111:AAAAAAAAAABBBBBBBBBBBBBBBBBBBBBBBBB"
+    },
+    "SUDO_USERS": {
+      "description": "Yetkili kullanıcının ID numarasını ekleyin. Birden fazla kullanıcı için ayırıcı olarak boşluk kullanın.",
+      "value": "572151421"
+    },
+    "DOWNLOAD_DIR": {
+      "description": "(İsteğe bağlı) İndirilen dosyaları saklamak için geçici indirme dizini. Varsayılan -> downloads/",
+      "value": "downloads/",
+      "required": false
+    }
+  },
+  "buildpacks": [
+    {
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
+    },
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
+}

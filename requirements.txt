@@ -1,0 +1,5 @@
+git+git://github.com/pyrogram/pyrogram@master
+TgCrypto
+python-dotenv
+hachoir
+ffmpeg-python
